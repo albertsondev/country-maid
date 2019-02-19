@@ -1,12 +1,24 @@
 <html>
 
 <head>
-  <base href="file:///E:/country-maid/">
-  
   <meta charset="utf-8">
   
   <title>Country Maid</title>
   
+  <meta name="description" content="Country Maid Ice Cream Official Website">
+  <meta name="author" content="Jared Albertson">
+  <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+  
+  <script>
+    // Temporary shim. Will ensure that site will load properly in all
+    // circumstances.
+    const REPO = 'country-maid';
+
+    let rootURL = window.location.href;
+    if (rootURL.indexOf(REPO)) {
+      document.write('<base href="' + rootURL.split(REPO)[0] + REPO + '/">');
+    }
+  </script>
   <link type="text/css" rel="stylesheet" href="style/style.css">
 </head>
 
@@ -14,6 +26,9 @@
   <div id="header">
     <div id="logo-wrapper">
       <object type="image/svg+xml" data="media/logo.svg" id="logo"></object>
+    </div>
+    <div id="navbar-button-wrapper">
+      <object type="image/svg+xml" data="media/menu.svg" id="navbar-button"></object>
     </div>
     <div id="navbar">
       <a class="nav-item" href="">Home</a>
@@ -27,7 +42,7 @@
   <div id="content">
     <img src="https://placekitten.com/256/256" class="right" alt="Placeholder Kitten.">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac nisi lectus. In iaculis quam felis, a vehicula enim accumsan sed. Proin eu sagittis mi. Quisque sagittis justo vitae auctor euismod. Pellentesque ullamcorper, magna vitae pellentesque faucibus, metus felis tincidunt sapien, eu placerat est quam vitae purus. Donec vulputate semper risus at aliquam. Vivamus malesuada purus sit amet vulputate interdum. Curabitur sit amet faucibus lectus, dignissim porttitor est. Cras nec sapien eget urna ultrices imperdiet. Integer venenatis porttitor cursus. Nam tincidunt tempor sem, id euismod turpis viverra non. Nam nec mi placerat, molestie nibh vel, tempor magna.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac nisi lectus. In iaculis quam felis, a vehicula enim accumsan sed. Proin eu sagittis mi. Quisque sagittis justo vitae auctor euismod. Pellentesque ullamcorper, magna vitae <a href="https://never-been-here.whatever">pellentesque faucibus</a>, metus felis tincidunt sapien, eu placerat est quam vitae purus. Donec vulputate <a href="https://google.com">semper risus</a> at aliquam. Vivamus malesuada purus sit amet vulputate interdum. Curabitur sit amet faucibus lectus, dignissim porttitor est. Cras nec sapien eget urna ultrices imperdiet. Integer venenatis porttitor cursus. Nam tincidunt tempor sem, id euismod turpis viverra non. Nam nec mi placerat, molestie nibh vel, tempor magna.
     </p>
     <p>
       Ut cursus fringilla semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus magna odio, egestas nec fermentum vulputate, condimentum a odio. In venenatis scelerisque dapibus. Aliquam fermentum lectus eget ante finibus tempor. Curabitur tempus, eros et pretium consequat, mi dolor accumsan metus, ac sagittis est diam nec mi. Pellentesque non felis ex. Duis non convallis nunc. In egestas scelerisque molestie. Phasellus nunc tortor, eleifend ut justo ac, malesuada dignissim velit. Proin aliquet fringilla augue sed vehicula. Donec tempor, neque in tincidunt convallis, tortor libero feugiat justo, vel varius sem tortor vitae mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer finibus, lectus non bibendum congue, lacus velit tincidunt sapien, vel porta velit urna nec ligula. Vivamus volutpat erat nec massa blandit, vehicula lobortis nisi scelerisque.

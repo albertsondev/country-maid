@@ -1,12 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 :root {
-  --main-light: #EFEFDF;
-  --main-dark: #220000;
+
+    /* REFINED PALETTE */
+    --main-light: #EFEFDF;
+    --main-light-tinted: #110000;
+    --main-light-shaded:;
+    
+    --main-dark: #220000;
+    --main-dark-tinted: #330000;
+    --main-dark-shaded: #110000;
+  
+    --content-bg: var(--main-light);
+  
+  
+  /*
+    /* WHIMSICAL PALETTE * /
+    --main-light: #CFCFFF;
+    --main-light-tinted:;
+    --main-light-shaded:;
+    
+    --main-dark: #442233;
+    --main-dark-tinted: #884466;
+    --main-dark-shaded: #221118;
+    
+    --content-bg: var(--main-light) repeat url('../media/background.png');
+  */
   
   --accent: #880044;
-  --accent-light: #AA0055;
-  --accent-dark: #660033;
+  --accent-tinted: #AA1155;
+  --accent-shaded: #660033;
   
   --margin-size: 8px;
   --navbar-height: 100px;
@@ -26,15 +49,16 @@ html, body {
 
 a {
   text-decoration: none;
+  font-weight: bold;
   color: var(--accent);
 }
 
 a:visited {
-  color: var(--accent-dark);
+  color: var(--accent-shaded);
 }
 
 a:hover {
-  color: var(--accent-light);
+  color: var(--accent-tinted);
 }
 
 #header {
@@ -55,6 +79,10 @@ a:hover {
   
   stroke: var(--main-light);
   fill: var(--main-light);
+}
+
+#navbar-button-wrapper {
+  display: none;
 }
 
 #navbar {
@@ -79,18 +107,62 @@ a:hover {
   border-bottom: 3px solid var(--main-dark);
 }
 
+@media only screen and (max-width: 600px) {
+  #navbar-button-wrapper {
+    position: absolute;
+    top: calc((var(--margin-size) / 2) + 24px);
+    left: calc((var(--margin-size) / 2) + 24px);
+    
+    display: block;
+    background-color: var(--main-dark);
+  }
+  
+  #navbar-button {
+    stroke: var(--main-light);
+    fill: var(--main-light);
+    
+    width: 24px;
+    height: 24px;
+  }
+  
+  #navbar {
+    display: none;
+  }
+  
+  #navbar-button-wrapper:active, #navbar-button-wrapper:hover {
+    background-color: var(--main-dark-shaded)!important;
+  }
+  
+  #navbar-button-wrapper:active + #navbar, #navbar-button-wrapper:hover + #navbar, #navbar:active, #navbar:hover {
+    position: absolute;
+    
+    top: calc((var(--margin-size) / 2) + 48px);
+    left: calc((var(--margin-size) / 2) + 24px);
+    
+    display: flex;
+    flex-direction: column;
+    
+    background-color: var(--main-dark-shaded);
+  }
+  
+  .nav-item: {
+    background-color: var(--main-dark-shaded);
+    border-bottom: none;
+  }
+}
+
 .nav-item:visited {
   color: var(--main-light);
 }
 
 .nav-item:hover {
-  background-color: #110000;
-  color: var(--accent-light);
+  background-color: var(--main-dark-shaded);
+  color: var(--accent-tinted);
   border-bottom-color: var(--accent);
 }
 
 #content {
-  background-color: var(--main-light);
+  background: var(--content-bg);
   color: var(--main-dark);
   padding: var(--margin-size);
 }
