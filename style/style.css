@@ -45,6 +45,7 @@ html, body {
   color: var(--main-dark);
   font-family: Raleway, sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 a {
@@ -107,6 +108,56 @@ a:hover {
   border-bottom: 3px solid var(--main-dark);
 }
 
+#top-img {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url("../media/orchard.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--main-light);
+  font-weight: bolder;
+  flex-direction: column;
+  justify-content: center;
+  margin: var(--margin-size), 0;
+}
+
+#hours {
+  text-align: center;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+#map {
+  float: right;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.video {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.video-wrapper {
+  width: 50vw;
+  height: 37.5vw;
+  display: inline-block;
+}
+
+.video-embed {
+  width: 100%;
+  height: 100%;
+}
+
 @media only screen and (max-width: 600px) {
   #navbar-button-wrapper {
     position: absolute;
@@ -149,6 +200,11 @@ a:hover {
     background-color: var(--main-dark-shaded);
     border-bottom: none;
   }
+  
+  .video-wrapper {
+    width: 90vw;
+    height: 68.5vw;
+  }
 }
 
 .nav-item:visited {
@@ -165,17 +221,4 @@ a:hover {
   background: var(--content-bg);
   color: var(--main-dark);
   padding: var(--margin-size);
-}
-
-p {
-  margin: 0;
-  padding: var(--margin-size);
-}
-
-.right {
-  float: right;
-}
-
-.left {
-  float: left;
 }

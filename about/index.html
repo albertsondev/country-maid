@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Country Maid</title>
+  
+  <meta name="description" content="Country Maid Ice Cream Official Website">
+  <meta name="author" content="Jared Albertson">
+  <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+  
+  <script>
+    // Temporary shim. Will ensure that site will load properly in all
+    // testing environments.
+    const REPO = 'country-maid';
+
+    let rootURL = window.location.href;
+    if (rootURL.indexOf(REPO)) {
+      document.write('<base href="' + rootURL.split(REPO)[0] + REPO + '/">');
+    }
+  </script>
+  <link type="text/css" rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo-wrapper">
+      <object type="image/svg+xml" data="media/logo.svg" id="logo"></object>
+    </div>
+    <div id="navbar-button-wrapper">
+      <object type="image/svg+xml" data="media/menu.svg" id="navbar-button"></object>
+    </div>
+    <div id="navbar">
+      <a class="nav-item" href="">Home</a>
+      <a class="nav-item" href="about/">About</a>
+      <a class="nav-item" href="ice-cream/">Ice Cream</a>
+      <a class="nav-item" href="menu/">Menu</a>
+      <a class="nav-item" href="orchard/">Orchard</a>
+      <a class="nav-item" href="harvest/">Harvest</a>
+    </div>
+  </div>
+  <div id="content">
+    <p>
+      The story began in 1948 when Frank Holeski moved back to his family farm in Richfield. Frank worked for the Bordens dairy company and decided to start his own ice cream store. He built the original concrete block building in 1948 and began making ice cream with a 20 gallon batch freezer using a salt brine system and ammonia refrigeration. One of Frank's earliest customers was West Point Market in Akron, where he sold pints and half gallons of ice cream. Frank watched his business grow, especially retail sales, with people taking a scenic drive down Route 303 and enjoying a stop for an ice cream cone. The business continued to grow, and traffic dramatically increased when the Richfield Coliseum was built in 1974, bringing in various attractions like basketball, hockey, soccer, circuses, and of course, many concerts.
+    </p>
+    <p>
+      Frank retired in 1978 and enjoyed retirement with his family in Reno, Nevada. Frank sold the business to the Torma family. All of the Tormas worked at the store helping Frank make and sell the ice cream, so the transition to onwership was very smooth. Business continued to increase. In 1996, the Torma family increased the size of the sales area and updated the old 20 gallon brine freezer to a set of two 10 gallon batch freezers. Each freezer produces 10 gallons of ice cream every eight minutes. Every flavor is still custom made using natural ingredients and fresh local fruit whenever possible.
+    </p>
+  </div>
+</body>
+
+</html>
