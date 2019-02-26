@@ -1,31 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 :root {
+  --main-light: #EFEFDF;
+  --main-light-tinted: #110000;
+  --main-light-shaded:;
+  
+  --main-dark: #220000;
+  --main-dark-tinted: #330000;
+  --main-dark-shaded: #110000;
 
-    /* REFINED PALETTE */
-    --main-light: #EFEFDF;
-    --main-light-tinted: #110000;
-    --main-light-shaded:;
-    
-    --main-dark: #220000;
-    --main-dark-tinted: #330000;
-    --main-dark-shaded: #110000;
-  
-    --content-bg: var(--main-light);
-  
-  
-  /*
-    /* WHIMSICAL PALETTE * /
-    --main-light: #CFCFFF;
-    --main-light-tinted:;
-    --main-light-shaded:;
-    
-    --main-dark: #442233;
-    --main-dark-tinted: #884466;
-    --main-dark-shaded: #221118;
-    
-    --content-bg: var(--main-light) repeat url('../media/background.png');
-  */
+  --content-bg: var(--main-light);
   
   --accent: #880044;
   --accent-tinted: #AA1155;
@@ -113,7 +97,7 @@ a:hover {
   box-sizing: border-box;
   width: 100%;
   height: 50vh;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url("../media/orchard.png");
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url("../media/creamery.png");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -137,6 +121,10 @@ a:hover {
   box-sizing: border-box;
 }
 
+#flavors {
+  columns: 2 auto;
+}
+
 .clear {
   clear: both;
 }
@@ -149,7 +137,9 @@ a:hover {
 
 .video-wrapper {
   width: 50vw;
+  min-width: 400px;
   height: 37.5vw;
+  min-height: 300px;
   display: inline-block;
 }
 
@@ -158,7 +148,15 @@ a:hover {
   height: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+.alert {
+  width: 100%;
+  background-color: #FF3322;
+  padding: var(--margin-size);
+  box-sizing: border-box;
+}
+
+/*
+@media only screen and (max-width: 400px) {
   #navbar-button-wrapper {
     position: absolute;
     top: calc((var(--margin-size) / 2) + 24px);
@@ -206,6 +204,7 @@ a:hover {
     height: 68.5vw;
   }
 }
+*/
 
 .nav-item:visited {
   color: var(--main-light);
@@ -222,3 +221,4 @@ a:hover {
   color: var(--main-dark);
   padding: var(--margin-size);
 }
+
