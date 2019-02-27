@@ -2,8 +2,8 @@
 
 :root {
   --main-light: #EFEFDF;
-  --main-light-tinted: #110000;
-  --main-light-shaded:;
+  --main-light-tinted: #FFFFEF;
+  --main-light-shaded: #DFDFCF;
   
   --main-dark: #220000;
   --main-dark-tinted: #330000;
@@ -47,10 +47,10 @@ a:hover {
 }
 
 #header {
-  background-color: var(--main-dark);
-  color: var(--main-light);
+  z-index: 1;
   text-align: center;
   padding-top: var(--margin-size);
+  box-shadow: 0px -7px 15px 4px #000000;
 }
 
 #logo-wrapper {
@@ -62,8 +62,8 @@ a:hover {
   width: auto;
   height: 60px;
   
-  stroke: var(--main-light);
-  fill: var(--main-light);
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 #navbar-button-wrapper {
@@ -88,8 +88,8 @@ a:hover {
   padding: var(--margin-size);
   text-align: center;
   font-weight: bolder;
-  color: var(--main-light);
-  border-bottom: 3px solid var(--main-dark);
+  color: var(--main-dark);
+  border-bottom: 3px solid var(--main-light);
 }
 
 #top-img {
@@ -97,7 +97,7 @@ a:hover {
   box-sizing: border-box;
   width: 100%;
   height: 50vh;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url("../media/creamery.png");
+  background: url("../media/creamery.png");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -207,18 +207,16 @@ a:hover {
 */
 
 .nav-item:visited {
-  color: var(--main-light);
+  color: var(--main-dark);
 }
 
 .nav-item:hover {
-  background-color: var(--main-dark-shaded);
+  background-color: var(--main-light-shaded);
   color: var(--accent-tinted);
   border-bottom-color: var(--accent);
 }
 
 #content {
-  background: var(--content-bg);
-  color: var(--main-dark);
   padding: var(--margin-size);
 }
 

@@ -9,16 +9,7 @@
   <meta name="author" content="Jared Albertson">
   <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
   
-  <script>
-    // Temporary shim. Will ensure that site will load properly in all
-    // testing environments.
-    const REPO = 'country-maid';
-
-    let rootURL = window.location.href;
-    if (rootURL.indexOf(REPO)) {
-      document.write('<base href="' + rootURL.split(REPO)[0] + REPO + '/">');
-    }
-  </script>
+  <base href="https://albertsondev.github.io/country-maid/">
   <link type="text/css" rel="stylesheet" href="style/style.css">
 </head>
 
@@ -36,17 +27,19 @@
       <a class="nav-item" href="menu/">Menu</a>
       <a class="nav-item" href="orchard/">Orchard</a>
     </div>
-    <div class="alert">
+<!--    <div class="alert">
       Opening Saturday, March 2!
     </div>
+-->
   </div>
   <div id="content">
     <!-- BEGIN CONTENT -->
     <div id="top-img">
-      <p>
-        Serving smiles for over 70 years, Country Maid has long been a down-to-earth staple of the Richfield community. Join us for a sweet treat!
-      </p>
+      
     </div>
+    <p>
+        Serving smiles for over 70 years, Country Maid has long been a down-to-earth staple of the Richfield community.
+      </p>
     <p>
       Country Maid Ice Cream is a great place to grab a cold delight with the family during a day in the Cuyahoga Valley. Have a look at our <a href="menu/">Menu</a>, plan a trip to the <a href="orchard/">Orchard</a>, or learn about <a href="about/">our history</a>! We look forward to your next visit!
     </p>
@@ -57,7 +50,6 @@
         <p> and </p> indicate standard content.
         This "!-- --" section does not display on the site itself.
       -->
-      <p>Weather permitting.</p>
       <b>Jan - Feb</b>
         <p>Closed</p>
       <b>Mar</b>
